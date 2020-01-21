@@ -18,8 +18,7 @@
 		"compression": "^1.7.4",
 		"express": "^4.17.1",
 		"helmet": "^3.21.2",
-		"nuxt": "^2.11.0",
-		"nuxt-buefy": "^0.3.21"
+		"nuxt": "^2.11.0"
 	},
 	"devDependencies": {
 		"babel-eslint": "^10.0.3",
