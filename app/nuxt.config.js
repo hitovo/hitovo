@@ -15,5 +15,10 @@ module.exports = {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 		]
 	},
+	buildModules: [
+		['@nuxtjs/google-analytics', {
+			id: 'UA-156659199-1'
+		}]
+	],
 	srcDir: './app/shared'
 };
