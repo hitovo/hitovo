@@ -26,6 +26,34 @@ const config = require('./config'),
 	// Enable gzip compression
 	app.use(compression());
 
+	// API route for ratios
+	app.get('/api/v1/ratios/:slug?', ({ params }, response) => {
+		let ratios = [{
+			label: 'V60',
+			slug: 'v60',
+			value: [3, 50]
+		}, {
+			label: 'Chemex',
+			slug: 'chemex',
+			value: [1, 17]
+		}, {
+			label: 'Aeropress',
+			slug: 'aeropress',
+			value: [1, 6]
+		}, {
+			label: 'French Press',
+			slug: 'french-press',
+			value: [1, 12]
+		}, {
+			label: 'Moka Pot',
+			slug: 'moka-pot',
+			value: [1, 10]
+		}];
+		response.json({
+			data: params.slug ? ratios.find((ratio) => ratio.slug === params.slug) || null : ratios
+		});
+	});
+
 	// Use Nuxt middleware
 	app.use(nuxt.render);
 
