@@ -12,12 +12,15 @@
 		"lint": "npm run lint:js && npm run lint:css",
 		"dev": "nodemon ./app/backend/server.js",
 		"build": "nuxt build -c ./app/nuxt.config.js",
-		"start": "node ./app/backend/server.js"
+		"start": "node ./app/backend/server.js",
+		"storybook": "start-storybook -p 6006 --no-dll",
+		"build-storybook": "build-storybook --no-dll"
 	},
 	"dependencies": {
 		"@nuxtjs/google-adsense": "^1.1.3",
 		"@nuxtjs/google-analytics": "^2.4.0",
 		"compression": "^1.7.4",
+		"core-js": "^3.7.0",
 		"express": "^4.17.1",
 		"helmet": "^4.2.0",
 		"lodash.clonedeep": "^4.5.0",
@@ -25,15 +28,20 @@
 		"nuxt-buefy": "^0.4.4"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.12.3",
 		"@commitlint/cli": "^11.0.0",
 		"@commitlint/config-conventional": "^11.0.0",
+		"@storybook/addon-essentials": "^6.0.28",
+		"@storybook/vue": "^6.0.28",
 		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.1.0",
 		"dotenv": "^8.2.0",
-		"eslint": "^7.12.1",
+		"eslint": "^7.13.0",
 		"eslint-plugin-vue": "^7.1.0",
 		"husky": "^4.3.0",
 		"node-sass": "^5.0.0",
 		"nodemon": "^2.0.6",
+		"react-is": "^17.0.1",
 		"sass-loader": "^10.0.5",
 		"stylelint": "^13.7.2",
 		"stylelint-config-standard": "^20.0.0",

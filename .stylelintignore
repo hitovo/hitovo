@@ -1,2 +1,4 @@
 node_modules
 app/client/static
+*.js
+**/*.js
